@@ -1,0 +1,37 @@
+{
+  "name": "resful-api-nodejs",
+  "version": "1.0.0",
+  "description": "Belajar Restfull Api",
+  "license": "ISC",
+  "author": "Andy W",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "jest -i"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "joi": "^18.1.2",
+    "uuid": "^14.0.0",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.2",
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^7.2.0",
+    "@types/uuid": "^10.0.0",
+    "babel-jest": "^30.3.0",
+    "jest": "^30.3.0",
+    "prisma": "^5.22.0",
+    "supertest": "^7.2.2"
+  }
+}

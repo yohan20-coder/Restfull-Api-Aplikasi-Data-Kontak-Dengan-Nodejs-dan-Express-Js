@@ -1,0 +1,120 @@
+### Register
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "Andy",
+  "password": "123",
+  "name": "test"
+}
+
+### Login
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "username": "test",
+  "password": "1234567"
+}
+
+### Get Current User
+GET http://localhost:3000/api/users/current
+Authorization:31af7b81-c094-40b7-86b8-d0805369b764
+
+### Update User
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Authorization: 6d12c8f2-56b1-4b74-b342-ecee7a5d9036
+
+{
+  "name" : "test update",
+  "password": "1234567"
+}
+
+### Logout User
+DELETE http://localhost:3000/api/users/logout
+Authorization: 2c009c11-764c-4ed1-99d3-c918fe57e4c3
+
+### Create Contact
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Authorization: 0ca84730-c810-4531-a7ed-e8c5b7e47d12
+
+{
+  "first_name": "Fanti",
+  "last_name": "Fanti Cantik",
+  "email": "fanti@example.com",
+  "phone": "08123456783"
+}
+
+### get Contact
+GET http://localhost:3000/api/contacts/2
+Authorization:0ca84730-c810-4531-a7ed-e8c5b7e47d12
+
+### Update Contact
+PUT http://localhost:3000/api/contacts/3
+Content-Type: application/json
+Authorization:0ca84730-c810-4531-a7ed-e8c5b7e47d12
+
+{
+    "id": 3,
+    "first_name": "Fatima Neno",
+    "last_name": "Fanti Cantik",
+    "email": "fanti@example.com",
+    "phone": "08123456783"
+}
+
+### delete Contact
+DELETE http://localhost:3000/api/contacts/3
+Authorization:0ca84730-c810-4531-a7ed-e8c5b7e47d12
+
+### Search by Name
+GET http://localhost:3000/api/contacts?name=Budi&page=1&size=10
+Authorization: a0203b3b-68a2-4031-ae6b-25febe080257
+
+### Search by Email
+GET http://localhost:3000/api/contacts?email=andisantoso@example.com&page=1&size=10
+Authorization: a0203b3b-68a2-4031-ae6b-25febe080257
+
+### Search by Name + Email
+GET http://localhost:3000/api/contacts?name=Budi&email=budiupdate@example.com&page=1&size=10
+Authorization: a0203b3b-68a2-4031-ae6b-25febe080257
+
+
+### Create Address
+POST http://localhost:3000/api/contacts/2/addresses
+Content-Type: application/json
+Authorization: a9c32bf1-b8f4-4cff-8209-dcf1acf2e77f
+
+{
+  "street": "Jl. Merdeka No. 102",
+  "city": "Surabaya",
+  "province": "Jawa Timur",
+  "country": "Indonesia",
+  "postal_code": "60123"
+}
+
+### Get Address by ID
+GET http://localhost:3000/api/contacts/2/addresses/2
+Authorization: a9c32bf1-b8f4-4cff-8209-dcf1acf2e77f
+
+### Update Address
+PUT http://localhost:3000/api/contacts/1/addresses/1
+Content-Type: application/json
+Authorization: a9c32bf1-b8f4-4cff-8209-dcf1acf2e77f
+
+{
+  "street": "Jl. Ahmad Yani No.1111",
+  "city": "Salatiga",
+  "province": "Jawa Tengah",
+  "country": "Indonesia",
+  "postal_code": "60235"
+}
+
+### Delete Address
+DELETE http://localhost:3000/api/contacts/1/addresses/1
+Authorization: a9c32bf1-b8f4-4cff-8209-dcf1acf2e77f
+
+### Get List Address by Contact
+GET http://localhost:3000/api/contacts/2/addresses
+Authorization: a9c32bf1-b8f4-4cff-8209-dcf1acf2e77f
